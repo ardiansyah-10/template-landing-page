@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Figtree", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* height: 57px; */
+  background: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  width: 5vh;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: #555;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.desc {
+  padding-top: 1.15rem;
+}
+
+#sec-1 {
+  margin-top: ;
+}
+
+.section:nth-child(odd) {
+  background: rgb(31, 31, 31);
+  color: white;
+}
+
+.custom-swal-button {
+  background-color: #042e82;
+  color: #fff; /* Warna teks putih agar kontras */
+  border: none;
+  font-family: "Figtree", sans-serif; /* Menggunakan font Figtree saat hover */
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-swal-button:hover {
+  background-color: #031e5c; /* Efek hover lebih gelap */
+  font-family: "Figtree", sans-serif; /* Menggunakan font Figtree saat hover */
+  transition: background-color 0.3s ease; /* Transisi halus saat hover */
+}
+
+.swal2-popup {
+  border-radius: 15px; /* Membuat sudut lebih bulat */
+  shadow: 25px 25px 20px rgba(0, 0, 0, 0.81); /* Menambahkan bayangan */
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    height: calc(100vh - 57px);
+    width: 70%;
+    background: #333;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
